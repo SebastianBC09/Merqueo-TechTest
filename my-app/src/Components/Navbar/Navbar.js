@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <Container fluid xl>
+    <Container fluid>
       <Card color="error">
         <Row align='center'>
           <Col span={10}>
