@@ -7,7 +7,8 @@ import './App.css';
 function App() {
   return (
     <NextUIProvider>
-      <Navbar />
+      {/* <Navbar /> */}
+      <CardComponent />
     </NextUIProvider>
   );
 }
