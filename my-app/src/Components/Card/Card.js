@@ -1,11 +1,21 @@
 import React from 'react';
-import { Card } from "@nextui-org/react";
+import { Card, Text, Row, Grid } from "@nextui-org/react";
 
 function CardComponent() {
   return (
-    <Card bordered shadow={false} hoverable css={{ mw: "250px" }}>
-      <p>Hoverable Card</p>
-    </Card>
+    <Grid xs={6} sm={3}>
+      <Card hoverable clickable color={'gradient'}>
+        <Card.Body>
+          <Card.Image />
+        </Card.Body>
+        <Card.Footer justify="flex-start">
+          <Row wrap='wrap' justify='space-between'>
+            <Text b>Item name would be here!</Text>
+            <Text css={{ color: "$accents4", fontWeight: "$semibold" }}> $15.99 </Text>
+          </Row>
+        </Card.Footer>
+      </Card>
+    </Grid>
   )
 }
 
