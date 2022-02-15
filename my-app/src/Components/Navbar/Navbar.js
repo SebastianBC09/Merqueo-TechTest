@@ -18,7 +18,6 @@ function Navbar() {
           </Col>
         </Row>
       </Card>
-
     </Container >
   )
 }
