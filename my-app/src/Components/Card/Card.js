@@ -1,10 +1,8 @@
 import React from 'react';
 import { Card, Row, Text, Button } from "@nextui-org/react";
-import Avocado from '../../Assets/Images/fruit-5.jpeg';
 
 function CardComponent(props) {
   const { attributes } = props;
-  console.log(attributes)
   return (
     <Card clickable bordered>
       <Card.Header>
@@ -12,6 +10,7 @@ function CardComponent(props) {
           src={attributes.image_large_url}
           width="100%"
           height={140}
+          alt={attributes.slug}
         />
       </Card.Header>
       <Card.Body>
