@@ -12,7 +12,6 @@ function CardComponent(props) {
           src={attributes.image_large_url}
           width="100%"
           height={140}
-        // objectFit='cover'
         />
       </Card.Header>
       <Card.Body>
