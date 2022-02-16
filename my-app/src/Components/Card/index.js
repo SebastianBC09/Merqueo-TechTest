@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Text, Button } from "@nextui-org/react";
 
-function CardComponent(props) {
+function ItemCard(props) {
   const { attributes } = props;
   return (
     <Card clickable bordered>
@@ -30,4 +30,4 @@ function CardComponent(props) {
   )
 }
 
-export { CardComponent };
+export { ItemCard };
