@@ -1,6 +1,33 @@
 # Merqueo-TechTest
 
-Solution for the technical challenge made with React JS &amp; NextUI for Merqueo
+Solution for the technical challenge made with React JS &amp; NextUI for Merqueo. In this case I will be creating a app for retail products & display the corresponding info
+
+## Live demo
+[Mercato-Col-Project](https://mercato-col.herokuapp.com/)
+
+## Preview Image
+![Screenshot 2022-02-17 at 16-41-24 React App](https://user-images.githubusercontent.com/53961155/154575519-8236fb23-0b69-4ca8-a4b4-1dac8bac0a92.png)
+
+
+## Technologies Used
+
+### React JS
+
+[v17.0.2](https://reactjs.org/)
+
+React was used to add individual components.
+
+### Next UI
+
+[Beta](https://nextui.org/)
+
+Next UI was used to create the UI & take advantage of their powerfull components.
+
+### React Router Dom
+
+[v6.2.1](https://reactrouter.com/)
+
+React router dom was added to create a single page application.
 
 # Getting Started with Create React App
 
