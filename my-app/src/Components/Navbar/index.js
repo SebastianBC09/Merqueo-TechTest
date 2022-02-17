@@ -9,15 +9,19 @@ function Navbar() {
       <Card color="error">
         <Row align='center'>
           <Col span={10}>
-            <Text h1 color='#F4F4F4'>
-              <Link to="/">
+            <Link to="/">
+              <Text h1 color='#F4F4F4'>
                 Mercato!
-              </Link>
-            </Text>
+              </Text>
+            </Link>
           </Col>
           <Col span={2}>
             <Row>
-              <Col span={3}><FaShoppingCart /></Col>
+              <Col span={3}>
+                <Link to="/shopping-cart">
+                  <FaShoppingCart color='#FFF' />
+                </Link>
+              </Col>
               <Col span={9}><Text h5 color='#F4F4F4'>Total: $45.769,86 </Text></Col>
             </Row>
           </Col>

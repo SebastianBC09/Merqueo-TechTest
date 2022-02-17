@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "../../Components/Navbar";
-import { Text, Container, Card, Row, Col } from "@nextui-org/react";
+import { Text, Container, Card, Row, Col, Spacer, Button } from "@nextui-org/react";
 import { useParams } from "react-router-dom";
 import { Context } from "../../Context/";
 
@@ -21,55 +21,88 @@ function ItemPage() {
   return (
     <>
       <Navbar />
+      <Spacer y={1} />
       <Container fluid>
-        <Row justify="center" align="center">
-          <Text h2>Detalles del Producto</Text>
-        </Row>
-        <Row>
-          <Col span={8}>
-            <Card color="primary">
-              <Row justify="center" align="center">
-                <Text h3>{itemData.attributes.name}</Text>
-              </Row>
-              <Row>
-                <Text h4>Precio: ${itemData.attributes.price}</Text>
-              </Row>
-              <Row>
-                <Text h4>Precio en oferta: ${itemData.attributes.special_price}</Text>
-              </Row>
-              <Row>
-                <Text h6>{itemData.attributes.pum}</Text>
-              </Row>
-              <Text>Item Details: ID Number {params.itemId}</Text>
-            </Card>
-          </Col>
-          <Col span={4}>
-            <Card color="gradient">
-              <Card.Header>
-                <Card.Image
-                  src={itemData.attributes.image_medium_url}
-                  width="100%"
-                  height={500}
-                  alt={itemData.attributes.slug}
-                />
-              </Card.Header>
-              <Card.Body>
-                <Row>
-                  <Text h5>Cantidad: {itemData.attributes.quantity}</Text>
+        <Card bordered css={{
+          background: "$red100",
+          mw: "100%"
+        }}
+        >
+          <Row justify="center" align="center">
+            <Text h1 css={{
+              color: "$red900"
+            }}>Detalles del Producto</Text>
+          </Row>
+          <Row>
+            <Col span={8} >
+              <Card bordered css={{
+                mw: "97%"
+              }}>
+                <Row justify="center" align="center">
+                  <Text h2 css={{
+                    color: "$red800"
+                  }}>{itemData.attributes.name}</Text>
                 </Row>
                 <Row>
-                  <Text h5>Unidades: {itemData.attributes.unit}</Text>
+                  <Text h3 css={{
+                    color: "$red800"
+                  }}>Precio: ${itemData.attributes.price}</Text>
                 </Row>
                 <Row>
-                  <Text h5>Volulmen: {itemData.attributes.volume}</Text>
+                  <Text h3 css={{
+                    color: "$red800"
+                  }}>Precio en oferta: ${itemData.attributes.special_price}</Text>
                 </Row>
-                <Row>
-                  <Text h5>Peso: {itemData.attributes.weight}</Text>
+                <Row justify="flex-end">
+                  <Text h4 css={{
+                    color: "$red800"
+                  }}>{itemData.attributes.pum}</Text>
                 </Row>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+              </Card>
+            </Col>
+            <Col span={4}>
+              <Card bordered >
+                <Card.Header>
+                  <Card.Image
+                    src={itemData.attributes.image_medium_url}
+                    width={150}
+                    height={150}
+                    alt={itemData.attributes.slug}
+                    objectFit="cover"
+                  />
+                </Card.Header>
+                <Card.Body>
+                  <Row>
+                    <Text h5 css={{
+                      color: "$red700"
+                    }}>Cantidad: {itemData.attributes.quantity}</Text>
+                  </Row>
+                  <Row>
+                    <Text h5 css={{
+                      color: "$red700"
+                    }}>Unidades: {itemData.attributes.unit}</Text>
+                  </Row>
+                  <Row>
+                    <Text h5 css={{
+                      color: "$red700"
+                    }}>Volulmen: {itemData.attributes.volume}</Text>
+                  </Row>
+                  <Row>
+                    <Text h5 css={{
+                      color: "$red700"
+                    }}>Peso: {itemData.attributes.weight}</Text>
+                  </Row>
+                </Card.Body>
+                <Card.Footer>
+                  <Row justify='center'>
+                    <Button size="lg" rounded flat color="error">Comprar</Button>
+                  </Row>
+                </Card.Footer>
+              </Card>
+            </Col>
+          </Row>
+
+        </Card>
       </Container>
     </>
   )
